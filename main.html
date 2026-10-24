@@ -1,1 +1,257 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Profile</title>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .profile-info {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .info p {
+      margin: 12px 0;
+      line-height: 1.5;
+    }
+
+    .info strong {
+      color: #222;
+    }
+
+    .skill {
+      margin-bottom: 22px;
+    }
+
+    .skill-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .skill-title i {
+      margin-right: 8px;
+      color: #007bff;
+    }
+
+    .progress {
+      width: 100%;
+      height: 12px;
+      background-color: #e9ecef;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #007bff;
+      border-radius: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #e7f1ff;
+      color: #0056b3;
+      border-radius: 15px;
+      font-size: 12px;
+      margin: 5px 4px 5px 0;
+    }
+
+    .about-heading {
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .about-heading::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background-color: #007bff;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+
+      .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- Left Section -->
+    <section>
+
+      <div class="profile-info">
+        <img
+          src="https://i.pravatar.cc/300?img=12"
+          alt="Profile picture"
+          class="profile-image"
+        >
+
+        <div class="info">
+          <p><strong>Name</strong>: Jashvendra Singh Chauhan</p>
+          <p><strong>Email</strong>: your.email@example.com</p>
+          <p><strong>Profile</strong>: Full Stack Developer</p>
+        </div>
+      </div>
+
+      <h2>Skills</h2>
+
+      <div>
+        <span class="badge">React.js</span>
+        <span class="badge">Next.js</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">ASP.NET Core</span>
+      </div>
+
+      <div class="skill">
+        <div class="skill-title">
+          <span><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+          <span>90%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-title">
+          <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span>85%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-title">
+          <span><i class="fa-brands fa-react"></i> React.js</span>
+          <span>90%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-title">
+          <span><i class="fa-solid fa-code"></i> Next.js</span>
+          <span>80%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-title">
+          <span><i class="fa-solid fa-server"></i> ASP.NET Core</span>
+          <span>65%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: 65%;"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Right Section -->
+    <section>
+
+      <h2 class="about-heading">About me</h2>
+
+      <p class="about-text">
+        I am a passionate Full Stack Developer with experience
+        in building responsive and scalable web applications.
+        I specialize in React.js, Next.js, JavaScript,
+        TypeScript, and ASP.NET Core.
+      </p>
+
+      <p class="about-text">
+        I enjoy solving complex problems, creating reusable
+        UI components, integrating REST APIs, and building
+        user-friendly applications.
+      </p>
+
+      <p class="about-text">
+        My goal is to continuously improve my technical
+        skills and contribute to innovative software products.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
